@@ -5,6 +5,7 @@ interface IWeatherCurrentConditions {
     windspeed: number | null,
     pressure: number | null,
     uvindex: number | null,
+    icon: string | null
 }
 
 export interface IWeatherState {
@@ -38,3 +39,7 @@ interface IFetchWeatherErrorAction {
 }
 
 export type WeatherAction = IFetchWeatherAction | IFetchWeatherSuccessAction | IFetchWeatherErrorAction
+
+export interface IWeatherIconProps {
+    icon: string | null,
+}

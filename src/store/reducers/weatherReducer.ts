@@ -10,7 +10,8 @@ const initialState: IWeatherState = {
             humidity: null,
             windspeed: null,
             pressure: null,
-            uvindex: null
+            uvindex: null,
+            icon: null
         },
         resolvedAddress: null
     },
@@ -29,7 +30,8 @@ export const weatherReducer = (state = initialState, action: WeatherAction): IWe
                         humidity: null,
                         windspeed: null,
                         pressure: null,
-                        uvindex: null
+                        uvindex: null,
+                        icon: null
                     },
                     resolvedAddress: null
                 }
@@ -51,7 +53,8 @@ export const weatherReducer = (state = initialState, action: WeatherAction): IWe
                         humidity: null,
                         windspeed: null,
                         pressure: null,
-                        uvindex: null
+                        uvindex: null,
+                        icon: null
                     },
                     resolvedAddress: null
                 },
