@@ -8,12 +8,29 @@ interface IWeatherCurrentConditions {
     icon: string | null
 }
 
+interface IWeatherNearest {
+    datetime: string | null,
+    hours: IWeatherNearestHours[]
+}
+
+interface IWeatherNearestHours {
+    datetime: string | null,
+    temp: number | null,
+    feelslike: number | null,
+    humidity: number | null,
+    windspeed: number | null,
+    pressure: number | null,
+    uvindex: number | null,
+    icon: string | null
+}
+
 export interface IWeatherState {
     loading: boolean,
     error: string | null,
     weather: {
         resolvedAddress: string | null,
-        currentConditions: IWeatherCurrentConditions
+        currentConditions: IWeatherCurrentConditions,
+        days: IWeatherNearest[],
     },
 }
 

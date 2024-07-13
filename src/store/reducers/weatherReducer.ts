@@ -4,6 +4,7 @@ const initialState: IWeatherState = {
     loading: false,
     error: null,
     weather: {
+        resolvedAddress: null,
         currentConditions: {
             temp: null,
             feelslike: null,
@@ -13,7 +14,7 @@ const initialState: IWeatherState = {
             uvindex: null,
             icon: null
         },
-        resolvedAddress: null
+        days: []
     },
 }
 
@@ -24,6 +25,7 @@ export const weatherReducer = (state = initialState, action: WeatherAction): IWe
                 loading: true,
                 error: null,
                 weather: {
+                    resolvedAddress: null,
                     currentConditions: {
                         temp: null,
                         feelslike: null,
@@ -33,7 +35,7 @@ export const weatherReducer = (state = initialState, action: WeatherAction): IWe
                         uvindex: null,
                         icon: null
                     },
-                    resolvedAddress: null
+                    days: []
                 }
             }
         case WeatherActionTypes.FETCH_WEATHER_SUCCESS:
@@ -47,6 +49,7 @@ export const weatherReducer = (state = initialState, action: WeatherAction): IWe
                 loading: false,
                 error: action.payload,
                 weather: {
+                    resolvedAddress: null,
                     currentConditions: {
                         temp: null,
                         feelslike: null,
@@ -56,7 +59,7 @@ export const weatherReducer = (state = initialState, action: WeatherAction): IWe
                         uvindex: null,
                         icon: null
                     },
-                    resolvedAddress: null
+                    days: []
                 },
             }
         default:
