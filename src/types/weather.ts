@@ -13,10 +13,9 @@ interface IWeatherNearest {
     hours: IWeatherNearestHours[]
 }
 
-interface IWeatherNearestHours {
+export interface IWeatherNearestHours {
     datetime: string | null,
     temp: number | null,
-    feelslike: number | null,
     humidity: number | null,
     windspeed: number | null,
     pressure: number | null,
