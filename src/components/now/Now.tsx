@@ -25,14 +25,19 @@ const Now: FC = () => {
     }
 
     return (
-        <div className='col-12 mb-5'>
-            <div className='col-12 d-flex justify-content-between align-items-center mb-5'>
-                {city !== '' &&
-                    <h1 className='m-0'>Погода сейчас в городе {city}</h1>
-                }
-                <button className='btn btn-dark'>Изменить город</button>
+        <div className='mb-5'>
+            <div className='row mb-5'>
+                <div className='col-10'>
+                    {city !== '' &&
+                        <h1 className='m-0'>Погода сейчас в городе {city}</h1>
+                    }
+                </div>
+                <div className='col-2'>
+                    <button className='w-100 btn btn-dark'>Изменить город</button>
+                </div>
             </div>
-            <div className='col-12 d-flex justify-content-between align-items-center'>
+            <div className='row justify-content-center'>
+                <CurrentConditions />
                 <CurrentConditions />
             </div>
         </div>

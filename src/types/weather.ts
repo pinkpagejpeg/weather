@@ -59,3 +59,10 @@ export type WeatherAction = IFetchWeatherAction | IFetchWeatherSuccessAction | I
 export interface IWeatherIconProps {
     icon: string | null,
 }
+
+export interface IWeatherNearestDayButton {
+    day: string,
+    date: string,
+    active: boolean,
+    getWeatherInfo: () => void,
+}
